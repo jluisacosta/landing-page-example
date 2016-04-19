@@ -5,9 +5,9 @@ var nib = require('nib');
 var minifyCSS = require('gulp-minify-css');
 
 var config = {
-    styles:{
+    styles: {
         main: './src/styles/main.styl',
-        watch: './src/styles/**/*.style',
+        watch: './src/styles/**/*.styl',
         output: './build/css'
     },
     html: {
