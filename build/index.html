@@ -51,41 +51,55 @@
         <section class="content-features">
             <div class="content-block">
                 <h3 class="content-block-title">Feature 1</h3>
-                <p>
-                    Lorem ipsum dolor sit amet,
-                </p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="content-block">
                 <h3 class="content-block-title">Feature 2</h3>
-                <p>
-                    Lorem ipsum dolor sit amet,
-                </p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="content-block">
                 <h3 class="content-block-title">Feature 3</h3>
-                <p>
-                    Lorem ipsum dolor sit amet,
-                </p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="content-block">
                 <h3 class="content-block-title">Feature 4</h3>
-                <p>
-                    Lorem ipsum dolor sit amet,
-                </p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
+        </section>
+
+        <section class="content-text">
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
         </section>
 
     </article>
 
     <script>
         (function () {
-            var btnMenu = document.getElementById('btnMenu');
-            var navbarMenu = document.getElementById('navbarMenu');
+            document.addEventListener('DOMContentLoaded',onDOMLoad);
 
-            btnMenu.addEventListener('click',onClickMenu);
+            function onDOMLoad() {
+                var btnMenu = document.getElementById('btnMenu');
+                var navbarMenu = document.getElementById('navbarMenu');
+                var headerElem = document.querySelector('.header');
 
-            function onClickMenu() {
-                navbarMenu.classList.toggle('header-menu-list--show');
+                btnMenu.addEventListener('click',onClickMenu);
+
+                function onClickMenu() {
+                    navbarMenu.classList.toggle('header-menu-list--show');
+                }
+
+                window.addEventListener('scroll',onScroll);
+
+                function onScroll() {
+                    if(window.scrollY >= 200){
+                        headerElem.classList.add('header--light');
+                    }
+                    else{
+                        headerElem.classList.remove('header--light');
+                    }
+                }
             }
         }());
     </script>

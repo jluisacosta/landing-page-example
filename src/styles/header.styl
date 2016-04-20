@@ -22,19 +22,20 @@
         order 2
         border 0
         border-radius 5px
-        background-color $black
+        background-color transparent
         color $white
         padding 0
         margin-right 1rem
 
     &-menu-navbar
         background-color $black
+        transition all .3s ease
 
     &-menu-list
         list-style-type none
         height 0
         overflow hidden
-        transition height .3s ease
+        transition all .3s ease
 
         &--show
             height 200px
@@ -47,6 +48,23 @@
                 padding 1.5rem
                 display block
                 line-height 0
+
+    /*Scroll effect over header*/
+
+    &--light
+        background-color $white
+        color $black
+
+        .header
+            &-btn-nav
+                color $black
+
+            &-menu-navbar
+                background-color $white
+
+            &-menu-list-item
+                a
+                    color $black
 
 @media (min-width: 768px)
     .header
