@@ -8,10 +8,12 @@
 <body>
 
     <header class="header">
-        <h1>Logo</h1>
-        <button class="header-btn-nav">Menu</button>
+        <div class="header-mobile">
+            <h1 class="header-logo">Logo</h1>
+            <button id="btnMenu" class="header-btn-nav">Menu</button>
+        </div>
         <nav class="header-menu-navbar">
-            <ul class="header-menu-list">
+            <ul id="navbarMenu" class="header-menu-list">
                 <li class="header-menu-list-item">
                     <a href="#">Home</a>
                 </li>
@@ -27,6 +29,19 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        (function () {
+            var btnMenu = document.getElementById('btnMenu');
+            var navbarMenu = document.getElementById('navbarMenu');
+
+            btnMenu.addEventListener('click',onClickMenu);
+
+            function onClickMenu() {
+                navbarMenu.classList.toggle('header-menu-list--show');
+            }
+        }());
+    </script>
 
 </body>
 </html>
