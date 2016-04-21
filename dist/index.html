@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Responsive Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="header-mobile">
+            <h1 class="header-logo">Logo</h1>
+            <button id="btnMenu" class="header-btn-nav">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <nav class="header-menu-navbar">
+            <ul id="navbarMenu" class="header-menu-list">
+                <li class="header-menu-list-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="">About</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="">Blog</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <article class="content">
+
+        <section>
+            <div class="container">
+
+                <div class="video-container">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/YiiXKoLYLMo"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-features">
+            <div class="container">
+
+                <div class="content-block">
+                    <h3 class="content-block-title">Feature 1</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="content-block">
+                    <h3 class="content-block-title">Feature 2</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="content-block">
+                    <h3 class="content-block-title">Feature 3</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="content-block">
+                    <h3 class="content-block-title">Feature 4</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-text-image">
+            <div class="container">
+
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./img/img01-desktop.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/img01-mobile-retina.jpg 2x">
+                    <img src="./img/img01-mobile.jpg">
+                </picture>
+
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+
+            </div>
+        </section>
+
+    </article>
+
+    <script>!function e(n,t,r){function o(s,a){if(!t[s]){if(!n[s]){var l="function"==typeof require&&require;if(!a&&l)return l(s,!0);if(i)return i(s,!0);var c=new Error("Cannot find module '"+s+"'");throw c.code="MODULE_NOT_FOUND",c}var d=t[s]={exports:{}};n[s][0].call(d.exports,function(e){var t=n[s][1][e];return o(t?t:e)},d,d.exports,e,n,t,r)}return t[s].exports}for(var i="function"==typeof require&&require,s=0;s<r.length;s++)o(r[s]);return o}({1:[function(e,n,t){var r=function(e){var n=document.createElement("link");n.rel="stylesheet",n.href=e,document.head.appendChild(n)};n.exports=r},{}],2:[function(e,n,t){var r=function(){window.scrollY>=200?headerElem.classList.add("header--light"):headerElem.classList.remove("header--light")};n.exports=r},{}],3:[function(e,n,t){!function(){function n(){function e(){o.classList.toggle("header-menu-list--show")}var n=document.getElementById("btnMenu"),o=document.getElementById("navbarMenu");document.querySelector(".header");n.addEventListener("click",e),window.addEventListener("scroll",r),t("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css"),t("https://fonts.googleapis.com/css?family=Montserrat|Lato")}var t=e("./lib/loadCSS.js"),r=e("./lib/onScroll.js");document.addEventListener("DOMContentLoaded",n)}()},{"./lib/loadCSS.js":1,"./lib/onScroll.js":2}]},{},[3]);</script>
+
+</body>
+</html>
