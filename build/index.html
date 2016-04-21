@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Responsive Web Page</title>
     <link rel="stylesheet" href="./css/main.css">
+    <title>My Responsive Web Page</title>
 </head>
 <body>
 
@@ -12,7 +12,9 @@
 
         <div class="header-mobile">
             <h1 class="header-logo">Logo</h1>
-            <button id="btnMenu" class="header-btn-nav">Menu</button>
+            <button id="btnMenu" class="header-btn-nav">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
 
         <nav class="header-menu-navbar">
@@ -103,12 +105,13 @@
                 var headerElem = document.querySelector('.header');
 
                 btnMenu.addEventListener('click',onClickMenu);
+                window.addEventListener('scroll',onScroll);
+                loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css');
+                loadCSS('https://fonts.googleapis.com/css?family=Montserrat|Lato');
 
                 function onClickMenu() {
                     navbarMenu.classList.toggle('header-menu-list--show');
                 }
-
-                window.addEventListener('scroll',onScroll);
 
                 function onScroll() {
                     if(window.scrollY >= 200){
@@ -117,6 +120,13 @@
                     else{
                         headerElem.classList.remove('header--light');
                     }
+                }
+
+                function loadCSS(url) {
+                    var elem = document.createElement('link');
+                    elem.rel = 'stylesheet';
+                    elem.href = url;
+                    document.head.appendChild(elem);
                 }
             }
         }());
