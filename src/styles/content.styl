@@ -22,32 +22,36 @@
         &:nth-child(4)
             border-left-color orange
 
-    &-text
-        &-image
-            picture
-                margin 0 auto
+    &-text-image
+        picture
+            margin 0 auto
 
-                img
-                    width 100%
+            img
+                width 100%
 
 @media (min-width: 768px)
+    .container
+        width 768px
+        margin 0 auto
+
     .content
         margin 80px 0 0 0
 
         &-features
-            display flex
+            .container
+                display flex
 
         &-block
             width 25%
 
-        &-text
-            &-image
+        &-text-image
+            .container
                 display flex
-
+                
                 picture
-                    margin 1em
                     order 1
                     width 30%
+                    margin 1em
 
                 p
                     order 2
