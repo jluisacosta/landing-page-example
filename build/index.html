@@ -95,42 +95,7 @@
 
     </article>
 
-    <script>
-        (function () {
-            document.addEventListener('DOMContentLoaded',onDOMLoad);
-
-            function onDOMLoad() {
-                var btnMenu = document.getElementById('btnMenu');
-                var navbarMenu = document.getElementById('navbarMenu');
-                var headerElem = document.querySelector('.header');
-
-                btnMenu.addEventListener('click',onClickMenu);
-                window.addEventListener('scroll',onScroll);
-                loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css');
-                loadCSS('https://fonts.googleapis.com/css?family=Montserrat|Lato');
-
-                function onClickMenu() {
-                    navbarMenu.classList.toggle('header-menu-list--show');
-                }
-
-                function onScroll() {
-                    if(window.scrollY >= 200){
-                        headerElem.classList.add('header--light');
-                    }
-                    else{
-                        headerElem.classList.remove('header--light');
-                    }
-                }
-
-                function loadCSS(url) {
-                    var elem = document.createElement('link');
-                    elem.rel = 'stylesheet';
-                    elem.href = url;
-                    document.head.appendChild(elem);
-                }
-            }
-        }());
-    </script>
+    <script src="./js/bundle.js"></script>
 
 </body>
 </html>
